@@ -5,16 +5,18 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class DataManager:
+
     def __init__(self):
-        self.endpoint = os.environ.get("SHEETY_PRICES_ENDPOINT")
+        self.endpoint = os.environ.get("SHEETY_PRICES_ENDPOINT", "")
+        token = os.environ.get("SHEETY_TOKEN", "")
         self.headers = {
-            "Authorization": os.environ.get("SHEETY_TOKEN"),
+            "Authorization": token,
             "Content-Type": "application/json",
         }
         self.destination_data = {}
 
     def get_destination_data(self):
-        response = requests.get(url=self.endpoint, headers=self.headers)
+        response = requests.get(url=self.endpoint, headers=self.headers,)
 
         if response.status_code == 200:
             data = response.json()

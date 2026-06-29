@@ -8,11 +8,16 @@ from datetime import datetime, timedelta
 requests_cache.install_cache(
     'flight_cache',
     backend='sqlite',
-    expire_after=3600)
+    expire_after=3600,
+    urls_expire_after={
+        'api.sheety.co': 0,
+    }
+    )
 
 data_manager = DataManager()
 
 planilha_de_dados = data_manager.get_destination_data()
+print(planilha_de_dados)
 
 flight_search = FlightSearch()
 
@@ -27,7 +32,7 @@ dados_voo = flight_search.check_flights(
     from_time=tomorrow,
     to_time=six_month_from_today
 )
-# Imprime o resultado formatado no console
+
 if dados_voo:
     print("\n================== RESULTADO DA SERPAPI ==================")
     pprint(dados_voo)
