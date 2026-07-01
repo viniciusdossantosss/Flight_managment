@@ -1,5 +1,5 @@
 # Flight Deal Finder and Alert System
-#### Video Demo: <https://youtu.be/SEU-VIDEO-AQUI>
+#### Video Demo: <https://youtu.be/llVxRW-COI4>
 #### Description:
 
 For my CS50P final project, I built a Python program that helps me find cheap flights. Instead of manually checking flight prices every day, this program does the work for me and sends me an SMS alert if it finds a good deal.
@@ -38,13 +38,13 @@ This design choices are from a course that I made and never finished, it's a pro
    ```
 2. Create a file named `.env` in the same folder and add your API credentials like this:
    ```text
-   SHEETY_PRICES_ENDPOINT="your_sheety_url"
-   SHEETY_TOKEN="your_sheety_token"
-   SERPAPI_API_KEY="your_serpapi_key"
-   TWILIO_SID="your_twilio_sid"
-   TWILIO_AUTH_TOKEN="your_twilio_auth_token"
-   TWILIO_VIRTUAL_NUMBER="your_twilio_number"
-   TWILIO_VERIFIED_NUMBER="your_real_phone_number"
+   SHEETY_PRICES_ENDPOINT
+   SHEETY_TOKEN
+   SERPAPI_API_KEY
+   TWILIO_SID
+   TWILIO_AUTH_TOKEN
+   TWILIO_VIRTUAL_NUMBER
+   TWILIO_VERIFIED_NUMBER
    ```
    *(You will need to create free accounts on Sheety, SerpAPI, and Twilio to get these keys).*
 3. Run the program:
